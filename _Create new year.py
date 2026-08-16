@@ -1,0 +1,13 @@
+from os import getcwd, rename, mkdir
+from shutil import copy
+FOLDER_PATH = getcwd()+"/"
+CREATE_NEW_DAY_SOURCE, CREATE_PART_2_SOURCE = "Create new day DO NOT USE.py", "Create part 2 DO NOT USE.py"
+CREATE_NEW_DAY, CREATE_PART_2 = "Create new day.py", "Create part 2.py"
+year = int(input("What year? "))
+NEW_FOLDER_PATH = FOLDER_PATH+f"AOC {year}/"
+
+mkdir(NEW_FOLDER_PATH)
+copy(FOLDER_PATH+CREATE_NEW_DAY_SOURCE, NEW_FOLDER_PATH)
+rename(NEW_FOLDER_PATH+CREATE_NEW_DAY_SOURCE, NEW_FOLDER_PATH+CREATE_NEW_DAY)
+copy(FOLDER_PATH+CREATE_PART_2_SOURCE, NEW_FOLDER_PATH)
+rename(NEW_FOLDER_PATH+CREATE_PART_2_SOURCE, NEW_FOLDER_PATH+CREATE_PART_2)
