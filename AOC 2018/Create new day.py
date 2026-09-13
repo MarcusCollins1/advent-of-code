@@ -4,7 +4,7 @@ FOLDER_PATH = (getcwd()+"\\").replace("\\", "/")
 YEAR = int(FOLDER_PATH.split("/")[-2].replace("AOC ", ""))
 day = int(input("What day? "))
 day = f"0{day}" if day < 10 else str(day)
-FILE_PATHS = [f"Day {day} {YEAR}.txt", f"Day {day} {YEAR} alt.txt", f"Day {day} {YEAR} test.txt"]
+FILE_PATHS = [f"Day {day} {YEAR}.txt", f"Day {day} {YEAR} test.txt"]
 PYTHON_FILE_PATH = f"Day {day} Part 1 {YEAR}.py"
 if path.isfile(FOLDER_PATH+PYTHON_FILE_PATH):
     x = input("This day already exists are you sure you would like to replace it (y/n)? ").lower()
