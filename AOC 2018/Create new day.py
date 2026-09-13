@@ -14,6 +14,6 @@ for file_path in FILE_PATHS:
     file = open(FOLDER_PATH+file_path, "w")
     file.close()
 file = open(FOLDER_PATH+PYTHON_FILE_PATH, "w")
-file.write(f'FOLDER_PATH = "{FOLDER_PATH}"\nFILE_NAME = "Day {day} {YEAR}.txt"\nFILE_NAME = "Day {day} {YEAR} alt.txt"\nFILE_NAME = "Day {day} {YEAR} test.txt"\n\nfile = open(FOLDER_PATH + FILE_NAME, "r")\ndata = [x.strip() for x in file.readlines()]\nfile.close()')
+file.write(f'from time import time\nt1 = time()\nFOLDER_PATH = "{FOLDER_PATH}"\nFILE_NAME = "Day {day} {YEAR}.txt"\nFILE_NAME = "Day {day} {YEAR} alt.txt"\nFILE_NAME = "Day {day} {YEAR} test.txt"\n\nfile = open(FOLDER_PATH + FILE_NAME, "r")\ndata = [x.strip() for x in file.readlines()]\nfile.close()\n\n\nprint(f"Time Taken: {{time()-t1:.2f}}s")')
 file.close()
 webbrowser.open(f"https://adventofcode.com/{YEAR}/day/{day}")
